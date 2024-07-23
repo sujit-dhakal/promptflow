@@ -1,0 +1,86 @@
+{
+  "nodes": {
+    "generating_heading": {
+      "variant_0": {
+        "inputs": {
+          "news": []
+        }
+      }
+    },
+    "generate_text": {
+      "variant_0": {
+        "inputs": {
+          "news": []
+        }
+      }
+    },
+    "process_articles": {
+      "variant_0": {
+        "inputs": {
+          "articles": []
+        }
+      }
+    },
+    "similar_text": {
+      "variant_0": {
+        "inputs": {
+          "text1": [],
+          "text2": []
+        }
+      }
+    },
+    "load_json": {
+      "variant_0": {
+        "inputs": {
+          "input1": []
+        }
+      }
+    },
+    "generate_heading": {
+      "variant_0": {
+        "inputs": {
+          "news": []
+        }
+      }
+    },
+    "heading": {
+      "variant_0": {
+        "inputs": {
+          "news": [],
+          "heading": [],
+          "body": [],
+          "headings": []
+        }
+      }
+    },
+    "summary": {
+      "variant_0": {
+        "inputs": {
+          "news": [],
+          "body": []
+        }
+      }
+    },
+    "load_json_body": {
+      "variant_0": {
+        "inputs": {
+          "input1": []
+        }
+      }
+    },
+    "load_json_date": {
+      "variant_0": {
+        "inputs": {
+          "input1": []
+        }
+      }
+    },
+    "load_json_source": {
+      "variant_0": {
+        "inputs": {
+          "input1": []
+        }
+      }
+    }
+  }
+}

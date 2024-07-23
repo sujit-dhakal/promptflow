@@ -1,0 +1,13 @@
+system:
+Summarize the following Nepali text in Nepali.
+
+{% for i in news %}
+text:
+{{i.inputs.body}}
+
+summary:
+{{i.outputs.body}}
+{% endfor %}
+
+text:
+{{body}}
