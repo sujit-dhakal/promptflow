@@ -1,0 +1,19 @@
+system:
+Generate a new and improved Nepali heading based on the given Nepali text and the existing Nepali heading.
+
+{% for item in news %}
+
+heading:
+{{item.inputs.headings}}
+text:
+
+{{item.inputs.body}}
+newHeading:
+
+{{item.outputs.heading}}
+{% endfor %}
+
+heading:
+{{headings}}
+body:
+{{body}}

@@ -1,0 +1,84 @@
+inputs:
+  source:
+    type: string
+    default: ""
+  news:
+    type: list
+  headings:
+    type: string
+    default: ""
+  body:
+    type: string
+    default: ""
+  date:
+    type: string
+    default: ""
+outputs:
+  source:
+    type: string
+    reference: ${load_json_source.output}
+  heading:
+    type: string
+    reference: ${load_json.output}
+  body:
+    type: string
+    reference: ${load_json_body.output}
+  date:
+    type: string
+    reference: ${load_json_date.output}
+nodes:
+- name: summary
+  type: llm
+  source:
+    type: code
+    path: summary.jinja2
+  inputs:
+    model: gpt-3.5-turbo-instruct
+    temperature: 0.3
+    max_tokens: 300
+    news: ${inputs.news}
+    body: ${inputs.body}
+  connection: open_ai_connection
+  api: completion
+- name: heading
+  type: llm
+  source:
+    type: code
+    path: generate_heading.jinja2
+  inputs:
+    model: gpt-3.5-turbo-instruct
+    max_tokens: 150
+    temperature: 0.3
+    news: ${inputs.news}
+    body: ${inputs.body}
+    headings: ${inputs.headings}
+  connection: open_ai_connection
+  api: completion
+- name: load_json
+  type: python
+  source:
+    type: code
+    path: load_json.py
+  inputs:
+    input1: ${heading.output}
+- name: load_json_body
+  type: python
+  source:
+    type: code
+    path: load_json_body.py
+  inputs:
+    input1: ${summary.output}
+- name: load_json_date
+  type: python
+  source:
+    type: code
+    path: load_json_date.py
+  inputs:
+    input1: ${inputs.date}
+- name: load_json_source
+  type: python
+  source:
+    type: code
+    path: load_json_source.py
+  inputs:
+    input1: ${inputs.source}

@@ -1,0 +1,158 @@
+{
+  "package": {},
+  "code": {
+    "generate_text.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "news": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "generate_text.jinja2"
+    },
+    "similar_text.py": {
+      "type": "python",
+      "inputs": {
+        "text1": {
+          "type": [
+            "string"
+          ]
+        },
+        "text2": {
+          "type": [
+            "string"
+          ]
+        },
+        "threshold": {
+          "type": [
+            "double"
+          ],
+          "default": "0.5"
+        }
+      },
+      "source": "similar_text.py",
+      "function": "my_python_tool"
+    },
+    "process_articles.py": {
+      "type": "python",
+      "inputs": {
+        "articles": {
+          "type": [
+            "list"
+          ]
+        }
+      },
+      "source": "process_articles.py",
+      "function": "my_python_tool"
+    },
+    "load_json.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "load_json.py",
+      "function": "my_python_tool"
+    },
+    "generate_heading.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "news": {
+          "type": [
+            "string"
+          ]
+        },
+        "headings": {
+          "type": [
+            "string"
+          ]
+        },
+        "body": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "generate_heading.jinja2"
+    },
+    "summary.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "news": {
+          "type": [
+            "string"
+          ]
+        },
+        "body": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "summary.jinja2"
+    },
+    "load_json_body.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "load_json_body.jinja2"
+    },
+    "load_json_body.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "load_json_body.py",
+      "function": "my_python_tool"
+    },
+    "load_json_date.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "load_json_date.py",
+      "function": "my_python_tool"
+    },
+    "load_json_source.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "load_json_source.py",
+      "function": "my_python_tool"
+    },
+    "prompt.jinja2": {
+      "type": "prompt",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "prompt.jinja2"
+    }
+  }
+}
